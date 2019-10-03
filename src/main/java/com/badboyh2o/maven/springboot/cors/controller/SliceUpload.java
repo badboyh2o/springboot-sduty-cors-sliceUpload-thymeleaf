@@ -22,6 +22,17 @@ public class SliceUpload {
     
     private final int BYTES_PER_SLICE = 1<<20;
     
+    
+    
+    /**
+     * 
+     * fileName 前端传过来的参数，每次应该一致
+     * 
+     * @param slice
+     * @param fileName
+     * @param index
+     * @return
+     */
     @RequestMapping(value="/sliceUpload",method= RequestMethod.POST)
     public int upload(@RequestParam("slice")MultipartFile slice,String fileName,int index) {
         int result = 0;
